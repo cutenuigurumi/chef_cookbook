@@ -6,6 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
 group  "#{node[:group1][:name]}" do
   gid node[:group1][:gid]
   action :create
@@ -14,7 +15,6 @@ group  "#{node[:group2][:name]}" do
   gid node[:group2][:gid]
   action :create
 end
-
 
 user "#{node[:user1][:name]}" do
   home "/home/#{node[:user1][:name]}"
