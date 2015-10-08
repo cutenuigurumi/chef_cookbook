@@ -11,11 +11,11 @@ group  "netmarketing" do
   action :create
 end
 
-user "ebara" do
-  home "/home/ebara"
+user "#{node[:user1][:name]}" do
+  home "/home/#{node[:user1][:name]}"
   shell "/bin/bash"
-  uid 2000
-  gid 2000
+  uid node[:user1][:name]
+  gid node[:user1][:name]
   supports :manage_home => true
   action :create
 end
