@@ -6,16 +6,16 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-group node "netmarketing" do
+group  "netmarketing" do
   gid 2000
   action :create
 end
 
-user node[:user][:1][:name] do
+user "ebara" do
   home "/home/ebara"
   shell "/bin/bash"
-  uid node[:user][:1][:name] 
-  gid node[:user][:1][:name] 
+  uid 2000
+  gid 2000
   supports :manage_home => true
   action :create
 end
